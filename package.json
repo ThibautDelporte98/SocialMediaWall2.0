@@ -1,0 +1,44 @@
+{
+  "name": "socialmediawall",
+  "version": "1.0.0",
+  "description": "To display all social media platforms at once.",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --no-source-map scss/styles.scss dist/styles.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "sass scss/styles.scss dist/styles.css --style compressed",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions'dist/styles.css -o dist/styles.css",
+    "build:css": "npm-run-all compile:sass prefix:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThibautDelporte98/SocialMediaWall2.0.git"
+  },
+  "keywords": [
+    "website",
+    "frontend",
+    "landingpage",
+    "smartone",
+    "KMO'S",
+    "bedrijfsleiders",
+    "eenmanszaken",
+    "freelance expert"
+  ],
+  "author": "ThibautDelporte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThibautDelporte98/SocialMediaWall2.0/issues"
+  },
+  "homepage": "https://github.com/ThibautDelporte98/SocialMediaWall2.0#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.16",
+    "postcss-cli": "^10.0.0",
+    "sass": "^1.62.1"
+  },
+  "dependencies": {
+    "bootstrap-icons": "^1.10.5"
+  }
+}
