@@ -1,28 +1,41 @@
-
 .grid-item { 
   width: calc(100% / 4 - 1rem);
   background-color: $color-primary;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
   margin-bottom: 1rem;
-  height:18rem;
+  height:20.5rem;
   border-radius: 10px;
   margin-right: .5rem;
   margin-left: .5rem;
+  transition: all .25s;
+  &:hover{
+    transition: all .25s;
+    transform: translateY(.25rem);
+  }
+  a{
+    color: $color-secundairy;
+    text-decoration: none;
+  }
+  
 
 }
 .grid-item--width2 {
    width: calc(100% / 4 - 1rem ) ;
-    height: 24rem;
+    height: 26.5rem;
     margin-right: .5rem;
     margin-left: .5rem;
 
  }
 
+ .grid-profiel{
+  display: flex;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
 
   .grid-profielImg{
     img{
-    margin-left: 1rem;
-    margin-top: 1rem;
     width: 3rem;
     height: 3rem;
     border-radius: 50%;     
@@ -31,10 +44,44 @@
  
   }
 
+.post-img{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  img{
+    position: relative;
+  }
+  .overlay-posts{
+    position: absolute;
+    bottom: 0;
+    background-color: $color-sec-opacity;    
+    padding: .75rem 1rem;
+    width: auto;
+    z-index: 1;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .overlay-likes{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $color-sec-opacity;
+    padding: .75rem 1rem;
+    width: auto;
+    z-index: 1;
+    border-bottom-left-radius: 10px;
+  }
+  .overlay-text{
+    color: $color-primary;
+    font-size: .75rem;
+    font-weight: $fw-light;
+    letter-spacing: .1rem;
+  }
+}
   .grid-postImg{
+
     .img{
-      position: absolute;
-      bottom: 0;
+
       width:100%;
       height: 12.5rem;
       object-fit: cover;
@@ -42,8 +89,6 @@
       border-bottom-right-radius: 10px;
     }
     .img-2{
-      position: absolute;
-      bottom: 0;
       width: 100%;
       height: 18.5rem;
       object-fit: cover;
@@ -52,7 +97,49 @@
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
     }
+
   }
+.grid-profielInfo{
+    margin-left: 1rem;
+    width: 100%;
+}
+
+.grid-profielName{
+  font-size: 1rem;
+  font-weight: $fw-semi;
+  letter-spacing: .05rem;
+}
+.grid-profielTime{
+  font-size: .75rem;
+  font-weight:$fw-light;
+  letter-spacing: .05rem;
+}
+
+.grid-icon{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -.5rem;
+  margin-right: 1rem;
+}
+
+.grid-txt{
+  font-size: .75rem;
+  font-weight: $fw-light;
+  letter-spacing: .05rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: .75rem;
+  width: auto;
+  overflow: hidden;
+  height: 2.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2; 
+  -webkit-box-orient: vertical;
+}
+.text-hidden{
+  height: 1rem;
+}
 
   @media only screen and (max-width: 1200px ) {
     .grid-item{
